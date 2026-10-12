@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Boarding Eligibility Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>✈ Airport Boarding Checker</h1>
+    <p>Passenger Boarding Eligibility System</p>
+</header>
+
+<main class="container">
+    <h2>Passenger Details</h2>
+
+    <label for="passenger">Passenger Name</label>
+    <input type="text" id="passenger" placeholder="Enter passenger name">
+
+    <label for="flight">Flight Number</label>
+    <input type="text" id="flight" placeholder="Example: AI202">
+
+    <label for="ticket">Ticket Status</label>
+    <select id="ticket">
+        <option value="confirmed">Confirmed</option>
+        <option value="notconfirmed">Not Confirmed</option>
+    </select>
+
+    <label for="boardingPass">Boarding Pass</label>
+    <select id="boardingPass">
+        <option value="available">Available</option>
+        <option value="unavailable">Not Available</option>
+    </select>
+
+    <label for="currentTime">Current Time (minutes)</label>
+    <input type="number" id="currentTime" min="0" placeholder="Example: 50">
+
+    <label for="closingTime">Boarding Closing Time (minutes)</label>
+    <input type="number" id="closingTime" min="0" placeholder="Example: 60">
+
+    <button id="checkButton" type="button">Check Eligibility</button>
+    <button id="resetButton" type="button" class="reset">Reset</button>
+
+    <div id="result" role="status" aria-live="polite">
+        Boarding status will appear here.
+    </div>
+</main>
+
+<footer>
+    <p>8085 Assembly Language Mini Project</p>
+    <p>Educational Simulation Only</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
